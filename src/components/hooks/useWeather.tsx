@@ -10,6 +10,7 @@ import snowIcon from '../../assets/snow.png';
 import clearIcon from '../../assets/clear.png';
 import nightIcon from '../../assets/night.png';
 
+
 interface WeatherData {
   city: string;
   temp: number;
@@ -38,7 +39,7 @@ const weatherIcons: {
 };
 
 const useWeather = () => {
-  const api_key = 'a05466de6204947e69823088ec6d9c64';
+  const api_key = import.meta.env.VITE_REACT_APP_API_KEY;
   const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
 
   const [city, setCity] = useState('');
